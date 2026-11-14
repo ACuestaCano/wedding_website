@@ -1248,6 +1248,38 @@ footer .footer-ornament {
 .photo-credit a { color: inherit; text-decoration: none; }
 .photo-credit a:hover { text-decoration: underline; }
 
+/* Wedding day: a light-touch programme */
+.day-flow { max-width: 720px; margin: 40px auto 10px; text-align: center; }
+
+.day-start {
+  margin: 0 0 18px;
+  font: 600 clamp(26px, 3.6vw, 34px)/1.2 var(--font-title);
+  color: var(--forest);
+}
+
+.day-steps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font: 13px var(--font-caps);
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--burgundy);
+}
+
+.day-steps li + li::before {
+  content: "✦";
+  margin: 0 16px;
+  font-size: 11px;
+  color: var(--terracotta);
+}
+
+.day-more { margin: 22px 0 0; font: italic 19px var(--font-script); color: var(--muted); }
+
 /* when SHOW_EMPTY_PHOTO_SLOTS is false, missing photos disappear */
 .hide-empty-slots .photo-slot.empty:not(.photo-shape) { display: none; }
 .hide-empty-slots .photo-card.no-photo { display: none; }
@@ -1531,50 +1563,15 @@ footer .footer-ornament {
       </p>
     </div>
 
-    <div class="cards">
-      <article class="info-card">
-        <h3 data-i18n="ceremonyTitle">La ceremonia</h3>
-        <p data-i18n="ceremonyText">
-          La ceremonia simbólica comenzará a las 13:30 y durará aproximadamente
-          entre 30 y 45 minutos. Si el tiempo acompaña, tendrá lugar al aire libre.
-          En caso de lluvia, Garena dispone de una alternativa cubierta.
-        </p>
-      </article>
-
-      <article class="info-card">
-        <h3 data-i18n="cocktailTitle">Cóctel y aperitivo</h3>
-        <p data-i18n="cocktailText">
-          Después de la ceremonia disfrutaremos de un cóctel y los primeros
-          aperitivos al aire libre, con una alternativa cubierta si el tiempo
-          no acompaña.
-        </p>
-      </article>
-
-      <article class="info-card">
-        <h3 data-i18n="banquetTitle">El banquete</h3>
-        <p data-i18n="banquetText">
-          El banquete tendrá lugar en el interior, aproximadamente a las 16:00.
-          La comida será uno de los momentos centrales del día: queremos que
-          disfrutéis sin prisas.
-        </p>
-      </article>
-
-      <article class="info-card">
-        <h3 data-i18n="partyTitle">Fiesta</h3>
-        <p data-i18n="partyText">
-          Después llegará el primer baile, la música, la barra libre y muchas
-          oportunidades para celebrar. También habrá un tentempié más tarde,
-          karaoke y diversión hasta aproximadamente medianoche.
-        </p>
-      </article>
-    </div>
-
-    <div class="callout">
-      <strong data-i18n="scheduleNoteTitle">Una pequeña nota:</strong>
-      <span data-i18n="scheduleNote">
-        Los horarios son provisionales y pueden ajustarse a medida que se
-        acerque la fecha. Actualizaremos esta página con cualquier cambio.
-      </span>
+    <div class="day-flow">
+      <p class="day-start" data-i18n="dayStart">Comenzaremos hacia las 13:00</p>
+      <ul class="day-steps">
+        <li data-i18n="ceremonyTitle">La ceremonia</li>
+        <li data-i18n="cocktailTitle">Cóctel y aperitivo</li>
+        <li data-i18n="banquetTitle">El banquete</li>
+        <li data-i18n="partyTitle">Fiesta</li>
+      </ul>
+      <p class="day-more" data-i18n="dayMore">Os daremos más detalles más cerca de la fecha.</p>
     </div>
   </section>
 
@@ -1733,9 +1730,9 @@ footer .footer-ornament {
             </div>
           </figure>
           <div class="place-body">
-            <div class="place-tag">Cantabria</div>
+            <div class="place-tag">Cantabria · Somo</div>
             <h3 data-i18n="exSantanderT">By car: Santander</h3>
-            <p data-i18n="exSantander">Roughly 1 to 1.5 hours from Bilbao. Walk around the Magdalena Palace and its peninsula, enjoy the long beach of El Sardinero and visit the Centro Botín, the arts centre right on the waterfront.</p>
+            <p data-i18n="exSantander">Roughly 1 to 1.5 hours from Bilbao. Walk around the Magdalena Palace and its peninsula, enjoy the long beach of El Sardinero and visit the Centro Botín, the arts centre right on the waterfront. Just across the bay, a short ferry ride from the city, is Somo, with its beach of about 7 km, where Andrea has spent many summers. Ruben dreams of spending every summer there, working in the morning and going to the beach in the afternoon.</p>
           </div>
         </article>
 
@@ -1812,7 +1809,7 @@ footer .footer-ornament {
           <div class="place-body">
             <div class="place-tag">Bermeo</div>
             <h3 data-i18n="exGaztelugatxeT">San Juan de Gaztelugatxe</h3>
-            <p data-i18n="exGaztelugatxe">A tiny island with a hermitage, linked to the mainland by a stone bridge and 241 steps. Ring the bell three times and make a wish. Game of Thrones fans will know it as Dragonstone. Entry is free, but on many dates a reservation is required, so check the current rules and book ahead. Wear sturdy shoes.</p>
+            <p data-i18n="exGaztelugatxe">A tiny island with a hermitage, linked to the mainland by a stone bridge and 241 steps. Ring the bell three times and make a wish. In Game of Thrones this is Dragonstone, the ancestral home of House Targaryen: Daenerys walks up these very steps when she returns to her birthplace in the first episode of season 7, with a castle added digitally on top of the island. Her landing on the beach was filmed at Itzurun in Zumaia (see Flysch below). Entry is free, but on many dates a reservation is required, so check the current rules and book ahead. Wear sturdy shoes.</p>
           </div>
         </article>
 
@@ -1910,7 +1907,7 @@ footer .footer-ornament {
           <div class="place-body">
             <div class="place-tag">Navarra</div>
             <h3 data-i18n="exBardenasT">Bardenas Reales</h3>
-            <p data-i18n="exBardenas">A surreal semi-desert of eroded canyons and sculpted hills, and a UNESCO Biosphere Reserve that has appeared in Game of Thrones. About 3 hours by car from Bilbao. Drive the circuit through the park or join a guided 4x4 tour.</p>
+            <p data-i18n="exBardenas">A surreal semi-desert of eroded canyons and sculpted hills, and a UNESCO Biosphere Reserve. In Game of Thrones it was the Dothraki Sea: this is where, at the start of season 6, Daenerys is held captive by the Dothraki and brought before Khal Moro, and where she later regains control of the horde. About 3 hours by car from Bilbao. Drive the circuit through the park or join a guided 4x4 tour.</p>
           </div>
         </article>
 
@@ -1938,7 +1935,7 @@ footer .footer-ornament {
           <div class="place-body">
             <div class="place-tag">Cantabria · Asturias · León</div>
             <h3 data-i18n="exPicosT">Picos de Europa</h3>
-            <p data-i18n="exPicos">A national park of jagged limestone peaks where Cantabria, Asturias and León meet. Ride the Fuente Dé cable car, hike the Cares Gorge or visit the Covadonga lakes. About 2.5 to 3 hours from Bilbao, so plan at least one night.</p>
+            <p data-i18n="exPicos">A national park of jagged limestone peaks where Cantabria, Asturias and León meet. It is very special to us: this is where Andrea’s grandma comes from, and Andrea has spent loads of holidays here. Our tips: visit Mogrovejo, the village where her grandma was born, ride the Fuente Dé cable car and see the monastery of Santo Toribio de Liébana. About 2.5 to 3 hours from Bilbao, so plan at least one night. With more time, the Cares Gorge and the Covadonga lakes are also stunning.</p>
           </div>
         </article>
 
@@ -2155,6 +2152,7 @@ footer .footer-ornament {
   <div class="footer-ornament">✧ ❦ ✧</div>
 </footer>
 
+<script src="place-photos.js"></script>
 <script>
 /* =========================================================
    TRANSLATIONS
@@ -2211,16 +2209,12 @@ const copy = {
     weddingTitle: "El día de la boda",
     weddingIntro: "Nos hace mucha ilusión celebrar este día con vosotros en un entorno especial, rodeados de naturaleza, buena comida y muchas ganas de disfrutar.",
     weddingDateLabel: "La fecha",
+    dayStart: "Comenzaremos hacia las 13:00",
+    dayMore: "Os daremos más detalles más cerca de la fecha.",
     ceremonyTitle: "La ceremonia",
-    ceremonyText: "La ceremonia simbólica comenzará a las 13:30 y durará aproximadamente entre 30 y 45 minutos. Si el tiempo acompaña, tendrá lugar al aire libre. En caso de lluvia, Garena dispone de una alternativa cubierta.",
     cocktailTitle: "Cóctel y aperitivo",
-    cocktailText: "Después de la ceremonia disfrutaremos de un cóctel y los primeros aperitivos al aire libre, con una alternativa cubierta si el tiempo no acompaña.",
     banquetTitle: "El banquete",
-    banquetText: "El banquete tendrá lugar en el interior, aproximadamente a las 16:00. La comida será uno de los momentos centrales del día: queremos que disfrutéis sin prisas.",
     partyTitle: "Fiesta",
-    partyText: "Después llegará el primer baile, la música, la barra libre y muchas oportunidades para celebrar. También habrá un tentempié más tarde, karaoke y diversión hasta aproximadamente medianoche.",
-    scheduleNoteTitle: "Una pequeña nota:",
-    scheduleNote: "Los horarios son provisionales y pueden ajustarse a medida que se acerque la fecha. Actualizaremos esta página con cualquier cambio.",
 
     journeyTitle: "El viaje",
     journeyIntro: "La celebración tendrá lugar en Garena, en Dima, Bizkaia. Aquí encontraréis la información para llegar y organizar vuestro transporte.",
@@ -2336,16 +2330,12 @@ const copy = {
     weddingTitle: "The wedding day",
     weddingIntro: "We are so excited to celebrate this day with you in a special setting, surrounded by nature, good food and plenty of reasons to enjoy ourselves.",
     weddingDateLabel: "The date",
+    dayStart: "We will start around 13:00",
+    dayMore: "We will share more details closer to the date.",
     ceremonyTitle: "The ceremony",
-    ceremonyText: "Our symbolic ceremony will begin at 13:30 and last approximately 30–45 minutes. If the weather allows, it will take place outdoors. Garena has a covered alternative in case of rain.",
     cocktailTitle: "Cocktail reception",
-    cocktailText: "After the ceremony, we will enjoy drinks and the first appetisers outdoors, with a covered alternative if the weather does not cooperate.",
     banquetTitle: "The banquet",
-    banquetText: "The banquet will take place indoors at approximately 16:00. Food is an important part of the day, and we want everyone to enjoy it without rushing.",
     partyTitle: "The party",
-    partyText: "Then it is time for our first dance, music, an open bar and plenty of celebrating. There will also be a late-night snack, karaoke and fun until around midnight.",
-    scheduleNoteTitle: "A little note:",
-    scheduleNote: "These timings are provisional and may change as the date approaches. We will update this page if anything changes.",
 
     journeyTitle: "The journey",
     journeyIntro: "The celebration will take place at Garena, in Dima, Bizkaia. Here you will find information to help you plan your journey and transport.",
@@ -2417,7 +2407,7 @@ const copy = {
     exBridgeT: "Puente de Bizkaia (Vizcaya Bridge)",
     exBridge: "The world's oldest transporter bridge, still in daily use. It opened in 1893 and is now a UNESCO World Heritage Site. Cross the river in the hanging gondola between Portugalete and Getxo, or walk the high-level walkway if you have a head for heights. Easy to reach by metro.",
     exSantanderT: "By car: Santander",
-    exSantander: "Roughly 1 to 1.5 hours from Bilbao. Walk around the Magdalena Palace and its peninsula, enjoy the long beach of El Sardinero and visit the Centro Botín, the arts centre right on the waterfront.",
+    exSantander: "Roughly 1 to 1.5 hours from Bilbao. Walk around the Magdalena Palace and its peninsula, enjoy the long beach of El Sardinero and visit the Centro Botín, the arts centre right on the waterfront. Just across the bay, a short ferry ride from the city, is Somo, with its beach of about 7 km, where Andrea has spent many summers. Ruben dreams of spending every summer there, working in the morning and going to the beach in the afternoon.",
     exDonostiT: "By car: San Sebastián",
     exDonosti: "Roughly 1 to 1.5 hours from Bilbao. Stroll along the shell-shaped bay of La Concha, taste pintxos in the Parte Vieja (old town) and climb Monte Igueldo or Monte Urgull for the views. Don't miss Chillida's sculpture El Peine del Viento at the end of the bay.",
     exSeaTitle: "Next to the sea",
@@ -2429,7 +2419,7 @@ const copy = {
     exSopelanaT: "Sopelana cliffs & beaches",
     exSopelana: "Keep following the same clifftop path to the wild beaches of Sopelana, such as Barinatxe (also known as La Salvaje), loved by surfers and often dotted with paragliders overhead. You can walk the whole Aixerrota–Sopelana stretch in one go and take the metro back from Larrabasterra.",
     exGaztelugatxeT: "San Juan de Gaztelugatxe",
-    exGaztelugatxe: "A tiny island with a hermitage, linked to the mainland by a stone bridge and 241 steps. Ring the bell three times and make a wish. Game of Thrones fans will know it as Dragonstone. Entry is free, but on many dates a reservation is required, so check the current rules and book ahead. Wear sturdy shoes.",
+    exGaztelugatxe: "A tiny island with a hermitage, linked to the mainland by a stone bridge and 241 steps. Ring the bell three times and make a wish. In Game of Thrones this is Dragonstone, the ancestral home of House Targaryen: Daenerys walks up these very steps when she returns to her birthplace in the first episode of season 7, with a castle added digitally on top of the island. Her landing on the beach was filmed at Itzurun in Zumaia (see Flysch below). Entry is free, but on many dates a reservation is required, so check the current rules and book ahead. Wear sturdy shoes.",
     exFlyschT: "Flysch, the Basque Coast Geopark",
     exFlysch: "Dramatic cliffs striped with rock layers that record tens of millions of years of Earth's history. Walk along the cliffs from Itzurun beach in Zumaia, or see them from a boat. Itzurun also appeared in Game of Thrones.",
     exMountainTitle: "If you like the mountains",
@@ -2443,11 +2433,11 @@ const copy = {
     exFurtherTitle: "If you want to go further",
     exFurtherLead: "Worth a bit more time: some make an easy day trip, others are best as an overnight stay or a stop on your way to or from the wedding.",
     exBardenasT: "Bardenas Reales",
-    exBardenas: "A surreal semi-desert of eroded canyons and sculpted hills, and a UNESCO Biosphere Reserve that has appeared in Game of Thrones. About 3 hours by car from Bilbao. Drive the circuit through the park or join a guided 4x4 tour.",
+    exBardenas: "A surreal semi-desert of eroded canyons and sculpted hills, and a UNESCO Biosphere Reserve. In Game of Thrones it was the Dothraki Sea: this is where, at the start of season 6, Daenerys is held captive by the Dothraki and brought before Khal Moro, and where she later regains control of the horde. About 3 hours by car from Bilbao. Drive the circuit through the park or join a guided 4x4 tour.",
     exOliteT: "Olite",
     exOlite: "A medieval town with a real fairy-tale castle: the Royal Palace of Olite, a maze of towers, courtyards and hidden passages. It combines well with the Bardenas (about an hour apart), and the surrounding area is wine country. A perfect place to spend the night.",
     exPicosT: "Picos de Europa",
-    exPicos: "A national park of jagged limestone peaks where Cantabria, Asturias and León meet. Ride the Fuente Dé cable car, hike the Cares Gorge or visit the Covadonga lakes. About 2.5 to 3 hours from Bilbao, so plan at least one night.",
+    exPicos: "A national park of jagged limestone peaks where Cantabria, Asturias and León meet. It is very special to us: this is where Andrea’s grandma comes from, and Andrea has spent loads of holidays here. Our tips: visit Mogrovejo, the village where her grandma was born, ride the Fuente Dé cable car and see the monastery of Santo Toribio de Liébana. About 2.5 to 3 hours from Bilbao, so plan at least one night. With more time, the Cares Gorge and the Covadonga lakes are also stunning.",
 
     storyP1: "In 2019, our paths crossed in a very modern way: Tinder.",
     storyP2: "Andrea was studying for a master’s degree in Utrecht and had no plans to stay in the Netherlands once she finished. But fate had other plans.",
@@ -2513,16 +2503,12 @@ const copy = {
     weddingTitle: "De trouwdag",
     weddingIntro: "We kijken er enorm naar uit om deze dag met jullie te vieren op een bijzondere plek, omringd door natuur, lekker eten en gezelligheid.",
     weddingDateLabel: "De datum",
+    dayStart: "We beginnen rond 13:00",
+    dayMore: "Meer details volgen dichter bij de datum.",
     ceremonyTitle: "De ceremonie",
-    ceremonyText: "Onze symbolische ceremonie begint om 13:30 en duurt ongeveer 30 tot 45 minuten. Als het weer het toelaat, vindt de ceremonie buiten plaats. Bij regen is er bij Garena een overdekt alternatief.",
     cocktailTitle: "Borrel en hapjes",
-    cocktailText: "Na de ceremonie genieten we buiten van een borrel en de eerste hapjes. Als het weer niet meewerkt, is er een overdekte mogelijkheid.",
     banquetTitle: "Het diner",
-    banquetText: "Het diner vindt binnen plaats, rond 16:00. Samen eten is een belangrijk onderdeel van de dag; we willen dat iedereen er rustig van kan genieten.",
     partyTitle: "Het feest",
-    partyText: "Daarna volgen onze openingsdans, muziek, een open bar en natuurlijk feest. Later op de avond is er ook een snack, karaoke en gezelligheid tot ongeveer middernacht.",
-    scheduleNoteTitle: "Een kleine opmerking:",
-    scheduleNote: "Deze tijden zijn voorlopig en kunnen veranderen naarmate de datum dichterbij komt. We werken deze pagina bij als er iets wijzigt.",
 
     journeyTitle: "De reis",
     journeyIntro: "De viering vindt plaats bij Garena, in Dima, Bizkaia. Hier vind je informatie om je reis en vervoer te plannen.",
@@ -2594,7 +2580,7 @@ const copy = {
     exBridgeT: "Puente de Bizkaia (Vizcaya-brug)",
     exBridge: "’s Werelds oudste zweefpont, nog altijd dagelijks in gebruik. Hij opende in 1893 en is nu UNESCO-werelderfgoed. Steek de rivier over in de hangende gondel tussen Portugalete en Getxo, of loop over de hooggelegen voetgangersbrug als je geen hoogtevrees hebt. Makkelijk te bereiken met de metro.",
     exSantanderT: "Met de auto: Santander",
-    exSantander: "Ongeveer 1 tot 1,5 uur rijden vanaf Bilbao. Wandel rond het Palacio de la Magdalena en het schiereiland, geniet van het lange strand van El Sardinero en bezoek het Centro Botín, het kunstcentrum aan het water.",
+    exSantander: "Ongeveer 1 tot 1,5 uur rijden vanaf Bilbao. Wandel rond het Palacio de la Magdalena en het schiereiland, geniet van het lange strand van El Sardinero en bezoek het Centro Botín, het kunstcentrum aan het water. Aan de overkant van de baai, een korte overtocht met de veerboot vanaf de stad, ligt Somo, met een strand van ongeveer 7 km, waar Andrea veel zomers heeft doorgebracht. Ruben droomt ervan om daar elke zomer door te brengen: ’s ochtends werken en ’s middags naar het strand.",
     exDonostiT: "Met de auto: San Sebastián",
     exDonosti: "Ongeveer 1 tot 1,5 uur rijden vanaf Bilbao. Wandel langs de schelpvormige baai van La Concha, proef pintxos in de Parte Vieja (oude stad) en beklim de Monte Igueldo of Monte Urgull voor het uitzicht. Mis het beeld El Peine del Viento van Chillida aan het einde van de baai niet.",
     exSeaTitle: "Aan zee",
@@ -2606,7 +2592,7 @@ const copy = {
     exSopelanaT: "Kliffen en stranden van Sopelana",
     exSopelana: "Volg hetzelfde pad over de kliftop naar de woeste stranden van Sopelana, zoals Barinatxe (ook wel La Salvaje genoemd), geliefd bij surfers en vaak met paragliders in de lucht. Je kunt het hele stuk van Aixerrota naar Sopelana in één keer lopen en met de metro terug vanaf Larrabasterra.",
     exGaztelugatxeT: "San Juan de Gaztelugatxe",
-    exGaztelugatxe: "Een klein eiland met een kapelletje, met het vasteland verbonden door een stenen brug en 241 treden. Luid de bel drie keer en doe een wens. Fans van Game of Thrones kennen het als Dragonstone. De toegang is gratis, maar op veel dagen is een reservering verplicht; controleer de actuele regels en boek vooraf. Draag stevige schoenen.",
+    exGaztelugatxe: "Een klein eiland met een kapelletje, met het vasteland verbonden door een stenen brug en 241 treden. Luid de bel drie keer en doe een wens. In Game of Thrones is dit Dragonstone, het voorouderlijk huis van House Targaryen: Daenerys loopt precies deze trappen op wanneer ze in de eerste aflevering van seizoen 7 terugkeert naar haar geboorteplek, met een digitaal toegevoegd kasteel bovenop het eiland. Haar landing op het strand werd gefilmd bij Itzurun in Zumaia (zie Flysch hieronder). De toegang is gratis, maar op veel dagen is een reservering verplicht; controleer de actuele regels en boek vooraf. Draag stevige schoenen.",
     exFlyschT: "Flysch, het Geopark van de Baskische kust",
     exFlysch: "Dramatische kliffen met gestreepte gesteentelagen die tientallen miljoenen jaren aardgeschiedenis vastleggen. Wandel over de kliffen vanaf het strand van Itzurun in Zumaia, of bekijk ze vanaf een boot. Itzurun was ook te zien in Game of Thrones.",
     exMountainTitle: "Als je van de bergen houdt",
@@ -2620,11 +2606,11 @@ const copy = {
     exFurtherTitle: "Als je verder wilt",
     exFurtherLead: "De moeite waard als je wat meer tijd hebt: sommige zijn een makkelijke dagtrip, andere kun je het beste combineren met een overnachting of als tussenstop op weg naar of van de bruiloft.",
     exBardenasT: "Bardenas Reales",
-    exBardenas: "Een surrealistische halfwoestijn met uitgesleten kloven en gevormde heuvels, een UNESCO-biosfeerreservaat dat ook in Game of Thrones te zien was. Ongeveer 3 uur rijden vanaf Bilbao. Rijd de rondweg door het park of boek een rondleiding per 4x4.",
+    exBardenas: "Een surrealistische halfwoestijn met uitgesleten kloven en gevormde heuvels, en een UNESCO-biosfeerreservaat. In Game of Thrones was dit de Dothraki Zee: hier wordt Daenerys aan het begin van seizoen 6 gevangengehouden door de Dothraki en voor Khal Moro gebracht, en hier krijgt ze later weer de controle over de horde. Ongeveer 3 uur rijden vanaf Bilbao. Rijd de rondweg door het park of boek een rondleiding per 4x4.",
     exOliteT: "Olite",
     exOlite: "Een middeleeuws stadje met een echt sprookjeskasteel: het Koninklijk Paleis van Olite, een doolhof van torens, binnenplaatsen en geheime gangen. Goed te combineren met de Bardenas (ongeveer een uur uit elkaar), en de omgeving is wijnland. Een perfecte plek om te overnachten.",
     exPicosT: "Picos de Europa",
-    exPicos: "Een nationaal park met grillige kalksteentoppen waar Cantabrië, Asturië en León samenkomen. Neem de kabelbaan van Fuente Dé, wandel door de Cares-kloof of bezoek de meren van Covadonga. Ongeveer 2,5 tot 3 uur rijden vanaf Bilbao, dus plan minstens één overnachting.",
+    exPicos: "Een nationaal park met grillige kalksteentoppen waar Cantabrië, Asturië en León samenkomen. Het is heel bijzonder voor ons: hier komt Andrea’s oma vandaan en Andrea heeft hier ontelbaar veel vakanties doorgebracht. Onze tips: bezoek Mogrovejo, het dorp waar haar oma is geboren, neem de kabelbaan van Fuente Dé en bekijk het klooster van Santo Toribio de Liébana. Ongeveer 2,5 tot 3 uur rijden vanaf Bilbao, dus plan minstens één overnachting. Heb je meer tijd? Ook de Cares-kloof en de meren van Covadonga zijn prachtig.",
 
     storyP1: "In 2019 kruisten onze wegen elkaar op een behoorlijk moderne manier: Tinder.",
     storyP2: "Andrea volgde een master in Utrecht en was niet van plan om na haar studie in Nederland te blijven. Maar het lot had andere plannen.",
@@ -2872,8 +2858,7 @@ document.querySelectorAll(".photo-slot img").forEach(img => {
 /* Photo credits for the tourist attractions (needed for CC BY / CC BY-SA photos).
    Add one line per photo, using the same name as the file, for example:
    bilbao: "Photo: Jane Doe, CC BY-SA 4.0, via Wikimedia Commons", */
-const PLACE_PHOTO_CREDITS = {
-};
+const PLACE_PHOTO_CREDITS = window.PLACE_PHOTO_CREDITS || {};
 
 document.querySelectorAll(".place-photo img").forEach(img => {
   const match = (img.getAttribute("src") || "").match(/places\/(\w+)\.jpg/);
@@ -2898,7 +2883,7 @@ document.querySelectorAll(".place-photo img").forEach(img => {
    PLACE_PHOTO_PINS = { gaztelugatxe: "File name on Commons.jpg" }
    ========================================================= */
 
-const PLACE_PHOTO_PINS = {};
+const PLACE_PHOTO_PINS = window.PLACE_PHOTO_PINS || {};
 
 const PLACE_PHOTO_SOURCES = {
   bilbao:       { wiki: ["Guggenheim Museum Bilbao"], search: ["Guggenheim Museum Bilbao"] },
@@ -3055,9 +3040,10 @@ function loadPlacePhotos() {
       const key = match[1];
       if (await imageSettled(img)) continue;           // you added your own photo
       let photo = cache[key];
+      if (photo && (photo.pin || "") !== (PLACE_PHOTO_PINS[key] || "")) photo = null;
       if (!photo) {
         photo = await resolvePlacePhoto(key);
-        if (photo) { cache[key] = Object.assign({ t: Date.now() }, photo); writePlaceCache(cache); }
+        if (photo) { cache[key] = Object.assign({ t: Date.now(), pin: PLACE_PHOTO_PINS[key] || "" }, photo); writePlaceCache(cache); }
       }
       if (photo) showPlacePhoto(img, photo);
     }
