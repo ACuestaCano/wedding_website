@@ -8,7 +8,7 @@
 
    OPTION 2: Formspree (answers arrive by email). Create a free form at
      formspree.io and paste its address:
-       window.RSVP_ENDPOINT = "https://formspree.io/f/xxxxxxxx";
+       window.RSVP_ENDPOINT = "https://script.google.com/macros/s/AKfycbzc62rduCBkDd9eNZGjtTWmY-dMiyxT1SxoxeWk0wMCD_qYs5yBkJpptWn22F4A7AmmSg/exec";
 
    Until an address is set, the form shows "not connected yet" when
    someone presses Send.
